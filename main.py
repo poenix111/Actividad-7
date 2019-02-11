@@ -3,7 +3,7 @@ from informador import Informador
 informador = Informador()
 informador.scrapping()
 print(len(informador.lista))
-
+informador.to_json()
 # import requests
 # from bs4 import BeautifulSoup
 # import json

@@ -2,7 +2,7 @@ import requests
 import requests
 from bs4 import BeautifulSoup
 import json
-
+import datetime 
 
 class Informador:
     def __init__(self):
@@ -52,3 +52,6 @@ class Informador:
 
             }
             self.lista.append(casa)
+    def to_json(self):
+        with open('informador ' + datetime.datetime.now().strftime('%y-%m-%d')+ '.json', "w") as archivo:
+            json.dump(self.lista,archivo, sort_keys=False,indent=4)
